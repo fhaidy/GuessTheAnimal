@@ -41,4 +41,15 @@ public class AnimalTest {
 
         Assertions.assertEquals("Dog", animal.getName(), "Animal returned should be dog");
     }
+
+    @Test
+    public void MustReturnCorrectAmountOfCharacteristics(){
+        ArrayList<String> characteristics = new ArrayList<>();
+        characteristics.add("It Barks");
+        characteristics.add("Has a tail");
+
+        Animal animal = new Animal("Dog", characteristics);
+
+        Assertions.assertEquals(2, animal.getNumberOfMatchingCharacteristics(characteristics), "Number of Characteristics should be 2");
+    }
 }

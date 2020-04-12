@@ -8,10 +8,6 @@ public class Animals {
         animals = new ArrayList<>();
     }
 
-    public boolean isEmpty(){
-        return animals.isEmpty();
-    }
-
     public void addAnimal(Animal animal){
         animals.add(animal);
     }
@@ -22,6 +18,10 @@ public class Animals {
                 return animal;
         }
         return null;
+    }
+
+    public List<Animal> toList(){
+        return animals;
     }
 
     public Animal getAnimalWithMoreMatchingCharacteristic(List<String> characteristics){
